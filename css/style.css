@@ -1,0 +1,130 @@
+/* reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	all: unset;
+}
+
+:root {
+	font-size: 62.5%;
+}
+body {
+	display: grid;
+	place-items: center;
+	font-family: 'Inter', sans-serif;
+	height: 100vh;
+	background-image: radial-gradient(ellipse, #385300, #212900);
+}
+.counter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #bef227;
+	width: 48rem;
+	height: 62rem;
+	border-radius: 1.2rem;
+	box-shadow: 0 2.5rem 12rem rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+}
+.counter--limit {
+	background-color: #91b91a;
+	color: #ff0000;
+}
+
+.counter__title {
+	margin-top: 6rem;
+	opacity: 0.6;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	width: 22rem;
+	text-align: center;
+	line-height: 0.9;
+	font-weight: 500;
+	font-size: 3.2rem;
+}
+
+.counter__value {
+	margin-top: 1rem;
+	color: #1d2507;
+	font-size: 20rem;
+	font-weight: 600;
+}
+.counter__reset-button {
+	cursor: pointer;
+}
+.puls {
+	animation: puls 3s ease-in-out infinite;
+}
+.counter__reset-icon {
+	opacity: 0.3;
+	font-size: 3.5rem;
+	transition: all 0.3s;
+}
+.counter__reset-icon:hover {
+	opacity: 0.5;
+}
+.counter__buttons {
+	display: flex;
+	margin-top: auto;
+	width: 100%;
+	height: 12rem;
+	background-color: #1d2507;
+	border-bottom-right-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+}
+.counter__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.counter__button:hover {
+	background-color: #212b06;
+}
+
+.counter__button--increase {
+	border-left: 0.1rem solid rgba(189, 254, 0, 0.15);
+}
+.counter__icon {
+	color: #bdfe00;
+	opacity: 0.9;
+	font-size: 4rem;
+}
+
+@media (max-width: 680px) or (max-height: 730px) {
+	.counter {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	.counter__title {
+		margin-top: 10rem;
+	}
+	.counter__value {
+		margin-top: 10rem;
+	}
+	.counter__buttons {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+@keyframes puls {
+	0% {
+		scale: 1;
+	}
+	50% {
+		scale: 1.5;
+	}
+	100% {
+		scale: 1;
+	}
+}
